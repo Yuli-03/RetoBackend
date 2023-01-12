@@ -68,7 +68,7 @@ public class AppoinmentController {
         try {
             appoinmentService.createAppoinment(appoinmentDto);
             SuccessMessage successMessage = new SuccessMessage(SUCCESS);
-            return ResponseEntity.status(HttpStatus.OK).body(successMessage);
+            return ResponseEntity.status(HttpStatus.CREATED).body(successMessage);
 
         } catch (Exception e){
             errorResponse.setMessage(e.getMessage());
@@ -99,7 +99,7 @@ public class AppoinmentController {
         try {
             appoinmentService.updateAppoinment(appoinmentDto);
             SuccessMessage successMessage = new SuccessMessage(UPDATE);
-            return ResponseEntity.status(HttpStatus.OK).body(successMessage);
+            return ResponseEntity.status(HttpStatus.CREATED).body(successMessage);
 
         } catch (Exception e){
             errorResponse.setMessage(e.getMessage());

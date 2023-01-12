@@ -75,7 +75,7 @@ public class AffiliateController {
         try {
             affiliateService.createAffiliate(affiliateDto);
             SuccessMessage successMessage = new SuccessMessage(SUCCESS);
-            return ResponseEntity.status(HttpStatus.OK).body(successMessage);
+            return ResponseEntity.status(HttpStatus.CREATED).body(successMessage);
 
         } catch (Exception e){
             errorResponse.setMessage(e.getMessage());
@@ -108,7 +108,7 @@ public class AffiliateController {
         try {
             affiliateService.updateAffiliate(affiliateDto);
             SuccessMessage successMessage = new SuccessMessage(UPDATE);
-            return ResponseEntity.status(HttpStatus.OK).body(successMessage);
+            return ResponseEntity.status(HttpStatus.CREATED).body(successMessage);
 
         } catch (Exception e){
             errorResponse.setMessage(e.getMessage());

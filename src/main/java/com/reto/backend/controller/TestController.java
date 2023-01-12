@@ -69,7 +69,7 @@ public class TestController {
         try {
             testService.createTest(testDto);
             SuccessMessage successMessage = new SuccessMessage(SUCCESS);
-            return ResponseEntity.status(HttpStatus.OK).body(successMessage);
+            return ResponseEntity.status(HttpStatus.CREATED).body(successMessage);
 
         } catch (Exception e){
             errorResponse.setMessage(e.getMessage());
@@ -101,7 +101,7 @@ public class TestController {
         try {
             testService.updateTest(testDto);
             SuccessMessage successMessage = new SuccessMessage(UPDATE);
-            return ResponseEntity.status(HttpStatus.OK).body(successMessage);
+            return ResponseEntity.status(HttpStatus.CREATED).body(successMessage);
 
         } catch (Exception e){
             errorResponse.setMessage(e.getMessage());
