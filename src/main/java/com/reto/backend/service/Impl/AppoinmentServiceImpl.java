@@ -120,7 +120,6 @@ public class AppoinmentServiceImpl implements AppoinmentService {
             fechaDate = formato.parse(date);
             Date tomorrow = new Date(fechaDate.getTime() + (1000 * 60 * 60 * 24));
             String nextDay = new SimpleDateFormat("dd-MM-yyyy").format(tomorrow);
-            System.out.println(nextDay);
             return nextDay;
         }
         catch (ParseException ex)
